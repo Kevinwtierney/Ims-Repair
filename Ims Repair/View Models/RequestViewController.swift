@@ -93,6 +93,22 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     func presentActivityViewController(withUrl url: URL) {
         DispatchQueue.main.async {
             let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+            activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop,
+                                                            UIActivity.ActivityType.message,
+                                                            UIActivity.ActivityType.assignToContact,
+                                                            UIActivity.ActivityType.markupAsPDF,
+                                                            UIActivity.ActivityType.addToReadingList,
+                                                            UIActivity.ActivityType.copyToPasteboard,
+                                                            UIActivity.ActivityType.openInIBooks,
+                                                            UIActivity.ActivityType.saveToCameraRoll,
+                                                            UIActivity.ActivityType.postToTwitter,
+                                                            UIActivity.ActivityType.mail,
+                                                            UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"),
+                                                                UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),
+                                                                
+            ]
+            
+            
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController, animated: true, completion: nil)
         }
@@ -105,6 +121,7 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBAction func selectBrand(_ sender: UITextField) {
         if pickerView.isHidden {
             pickerView.isHidden = false
+            brand.inputView = pickerView
         }
     }
     

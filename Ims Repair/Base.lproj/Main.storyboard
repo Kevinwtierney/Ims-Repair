@@ -301,22 +301,19 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nk-fz-lO4">
-                                <rect key="frame" x="75" y="328.5" width="320" height="50"/>
+                                <rect key="frame" x="47" y="646" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="rHm-Ji-HTR"/>
-                                </constraints>
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PEU-bS-S8z"/>
                         <color key="backgroundColor" red="0.0" green="0.3803921569" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8Nk-fz-lO4" firstAttribute="top" secondItem="h3e-3A-qpL" secondAttribute="bottom" constant="180" id="7xS-Sf-IPb"/>
                             <constraint firstItem="RjQ-sa-KIb" firstAttribute="leading" secondItem="PEU-bS-S8z" secondAttribute="leading" constant="20" id="Ah5-F9-uy6"/>
+                            <constraint firstItem="8Nk-fz-lO4" firstAttribute="centerX" secondItem="iGC-nA-EcE" secondAttribute="centerX" id="D6B-Sv-vYO"/>
                             <constraint firstItem="RjQ-sa-KIb" firstAttribute="top" secondItem="PEU-bS-S8z" secondAttribute="top" constant="100" id="EAM-WC-2Gl"/>
                             <constraint firstItem="PEU-bS-S8z" firstAttribute="trailing" secondItem="RjQ-sa-KIb" secondAttribute="trailing" constant="20" id="WlJ-Kr-avZ"/>
+                            <constraint firstItem="8Nk-fz-lO4" firstAttribute="bottom" secondItem="PEU-bS-S8z" secondAttribute="bottom" id="Z5r-IB-Tvo"/>
                             <constraint firstItem="Jkm-gm-lA4" firstAttribute="top" secondItem="RjQ-sa-KIb" secondAttribute="bottom" constant="35" id="enK-To-C28"/>
-                            <constraint firstItem="8Nk-fz-lO4" firstAttribute="leading" secondItem="PEU-bS-S8z" secondAttribute="leading" constant="75" id="hdi-bS-mYI"/>
                             <constraint firstItem="h3e-3A-qpL" firstAttribute="centerX" secondItem="iGC-nA-EcE" secondAttribute="centerX" id="lpa-X8-vKP"/>
                             <constraint firstItem="Jkm-gm-lA4" firstAttribute="centerX" secondItem="iGC-nA-EcE" secondAttribute="centerX" id="pXk-xl-MbI"/>
                             <constraint firstItem="h3e-3A-qpL" firstAttribute="top" secondItem="PEU-bS-S8z" secondAttribute="top" constant="10" id="wRa-v3-uRI"/>

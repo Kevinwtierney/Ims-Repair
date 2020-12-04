@@ -84,6 +84,7 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
         
     }
     
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
     }
@@ -93,6 +94,7 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
         if pickerView.isHidden {
             pickerView.isHidden = false
         }
+        status.inputView = pickerView
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
