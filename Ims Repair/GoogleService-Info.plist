@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>696081170327-b2lbo7blvhbng1c7d724tm5nitt3ghi5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.696081170327-b2lbo7blvhbng1c7d724tm5nitt3ghi5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBK5xaSMmExYVZdPEE-QAIzX1R6QZ8AkZQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>696081170327</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.intmfg.Ims-Repair</string>
+	<key>PROJECT_ID</key>
+	<string>ims-repair</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ims-repair.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:696081170327:ios:c9ff8fe26767d727800ed2</string>
+	<key>DATABASE_URL</key>
+	<string>https://ims-repair.firebaseio.com</string>
+</dict>
+</plist>
