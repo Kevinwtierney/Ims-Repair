@@ -21,7 +21,7 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet var company: UITextField!
     @IBOutlet var brand: UITextField!
     @IBOutlet var model: UITextField!
-    @IBOutlet var issue: UITextView!
+    @IBOutlet var issue: UITextField!
     @IBOutlet var sn: UITextField!
     @IBOutlet var pickerView: UIPickerView!
     

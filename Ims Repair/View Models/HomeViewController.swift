@@ -69,7 +69,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Repair", for: indexPath)
-        //let repairs = repairArraySearch[indexPath.row]
         let repaired = repairsSearch[indexPath.row]
         
         cell.textLabel!.text = repaired.company + " | " + repaired.model + " - " + repaired.sn

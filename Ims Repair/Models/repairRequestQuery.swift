@@ -32,5 +32,24 @@ struct repair: Identifiable, Codable{
         }
     }
 
+struct users: Identifiable, Codable{
+    @DocumentID var id : String?
+    var fname : String
+    var lname : String
+    var email : String
+    var uid : String
+    var admin : Bool
+    
+    enum CodingKeys: String, CodingKey {
+       case id
+       case email
+       case fname = "first name"
+       case lname = "last name"
+       case uid
+       case admin = "isadmin"
+    }
+    
+    
+}
 
 
