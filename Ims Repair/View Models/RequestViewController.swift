@@ -57,10 +57,6 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             else {
                 self.savePDF()
                 print("Document added with ID: \(ref!.documentID)")
-//                let alertController = UIAlertController(title: "SUCCESS", message: "Your request has been submitted, print repair paperwork and ship with tool", preferredStyle: .alert)
-//                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//                alertController.addAction(defaultAction)
-//                self.present(alertController, animated: true, completion: nil)
               
                 sender.isUserInteractionEnabled = true
                 self.name.text = ""

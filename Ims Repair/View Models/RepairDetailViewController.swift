@@ -84,6 +84,31 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
         
     }
     
+    @IBAction func deleteEntry(_ sender: Any){
+        let alertController = UIAlertController(title: "Delete Entry", message: "Are you sure you want to delete this entry?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler:{ (action) -> Void in
+            print("this entry has been deleted")
+            self.deleteitem()
+            self.navigationController?.popViewController(animated: true)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func deleteitem(){
+        db.collection("Repairs").document(repairid).delete { (error) in
+            if let error = error {
+                print("error removing item \(error)")
+            }
+            else{
+                print("document \(self.repairid) was sucessfully deleted" )
+            }
+        }
+    }
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
