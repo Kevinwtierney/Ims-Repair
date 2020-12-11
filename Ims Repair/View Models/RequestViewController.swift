@@ -24,6 +24,7 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet var issue: UITextField!
     @IBOutlet var sn: UITextField!
     @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet var submit: UIButton!
     
     let db = Firestore.firestore()
     let storage = Storage.storage()
@@ -38,7 +39,7 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         pickerView.delegate = self
         pickerView.dataSource = self
     }
-   
+    
     @IBAction func submitAction(_ sender: UIButton!) {
         sender.isUserInteractionEnabled = false
         var ref: DocumentReference? = nil
@@ -110,6 +111,7 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         }
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         return false
     }
     

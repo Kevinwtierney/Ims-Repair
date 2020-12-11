@@ -25,7 +25,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tZ-ya-F6V">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X - 1background" translatesAutoresizingMaskIntoConstraints="NO" id="Ohw-gA-M7U">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X - 1background-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ohw-gA-M7U">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMS Repair" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPX-cw-BV4">
@@ -36,7 +36,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49G-G2-fbP">
                                         <rect key="frame" x="68" y="356" width="278" height="62"/>
-                                        <color key="backgroundColor" red="0.0" green="0.3803921569" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.33333333329999998" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="Request Repair">
@@ -116,14 +116,14 @@
             <objects>
                 <viewController id="DPC-Uj-Eyh" customClass="RequestViewController" customModule="Ims_Repair" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iGC-nA-EcE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X - 2background2" translatesAutoresizingMaskIntoConstraints="NO" id="qh4-Kq-bBg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RjQ-sa-KIb" userLabel="Vertical Stack View">
-                                <rect key="frame" x="20" y="188" width="374" height="330"/>
+                                <rect key="frame" x="20" y="100" width="374" height="330"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y4a-dl-5OW" userLabel="Row Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -285,7 +285,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jkm-gm-lA4">
-                                <rect key="frame" x="144.5" y="562" width="125" height="125"/>
+                                <rect key="frame" x="144.5" y="474" width="125" height="125"/>
                                 <color key="backgroundColor" red="0.0" green="0.33333333333333331" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="kaa-Vw-FM0"/>
@@ -307,7 +307,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nk-fz-lO4">
-                                <rect key="frame" x="47" y="646" width="320" height="216"/>
+                                <rect key="frame" x="47" y="558" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                         </subviews>
@@ -338,6 +338,7 @@
                         <outlet property="name" destination="4oM-1o-q8t" id="IFE-fB-4P0"/>
                         <outlet property="pickerView" destination="8Nk-fz-lO4" id="R5k-OM-a9h"/>
                         <outlet property="sn" destination="Myb-kq-h69" id="SYi-Ef-sBV"/>
+                        <outlet property="submit" destination="Jkm-gm-lA4" id="vxw-em-G1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nv5-oG-GCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -436,7 +437,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X - 1background" translatesAutoresizingMaskIntoConstraints="NO" id="qmE-pU-BgE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X - 1background-1" translatesAutoresizingMaskIntoConstraints="NO" id="qmE-pU-BgE">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="JJh-Ag-D9a" userLabel="Vertical stack View">
@@ -539,11 +540,17 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Password Reset"/>
+                                                <connections>
+                                                    <action selector="resetPassword" destination="Z7a-df-dmb" eventType="touchUpInside" id="s1l-fo-Whp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpQ-5a-YYl">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Change Email"/>
+                                                <connections>
+                                                    <action selector="changeEmail" destination="Z7a-df-dmb" eventType="touchUpInside" id="ePC-QK-eat"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="lT8-PI-4LX"/>
@@ -845,7 +852,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X - 1background" translatesAutoresizingMaskIntoConstraints="NO" id="8eq-rB-xt8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X - 1background-1" translatesAutoresizingMaskIntoConstraints="NO" id="8eq-rB-xt8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kU0-gZ-Idy">
@@ -966,11 +973,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5yF-4F-e7b"/>
-        <segue reference="0iC-8X-7Gc"/>
+        <segue reference="jCF-BI-5oz"/>
+        <segue reference="6GM-U8-b1E"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="X - 1background" width="375" height="812"/>
+        <image name="X - 1background-1" width="375" height="812"/>
         <image name="X - 2background2" width="375" height="812"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
