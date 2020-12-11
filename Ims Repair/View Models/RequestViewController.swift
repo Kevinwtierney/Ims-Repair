@@ -34,6 +34,7 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         brand.delegate = self
+        issue.delegate = self
         self.hideKeyboardWhenTappedAround()
         pickerView.isHidden = true
         pickerView.delegate = self
@@ -112,9 +113,19 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        return false
+        let maxLength : Int
+        if(textField == issue){
+            maxLength = 29
+        }
+        else{
+            return false
+        }
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+        
+        return newString.length <= maxLength
     }
-    
+   
     
     @IBAction func selectBrand(_ sender: UITextField) {
         if pickerView.isHidden {
@@ -141,4 +152,11 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         brand.resignFirstResponder()
     }
     
+    private func textLimit(existingText: String?,
+                           newText: String,
+                           limit: Int) -> Bool {
+        let text = existingText ?? ""
+        let isAtLimit = text.count + newText.count <= limit
+        return isAtLimit
+    }
 }
