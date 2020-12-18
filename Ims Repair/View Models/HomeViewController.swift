@@ -14,11 +14,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var repairTableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var openRepairs: UIButton!
+    @IBOutlet var closedRepairs: UIButton!
     
     var repairs = [repair]()
     var repairsSearch = [repair]()
     
     let db = Firestore.firestore()
+    let IMS = UIColor.init(red: 0.000, green: 0.333, blue: 0.722, alpha: 1)
     
     
     //This loads all of the view data on Load
@@ -33,15 +36,36 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         searchBar.delegate = self
         self.hideKeyboardWhenTappedAround()
-       
+        let nib = UINib(nibName: "RepairTableViewCell", bundle: nil)
+        repairTableView.register(nib, forCellReuseIdentifier: "RepairTableViewCell")
         repairTableView.dataSource = self
         repairTableView.delegate = self
         loadData()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        reload()
+    }
     
     // This function Loads data from firstore
     func loadData () {
-        db.collection("Repairs").addSnapshotListener { (QuerySnapshot, Error) in
+        db.collection("Repairs").whereField("status", isNotEqualTo: "Repaired").order(by: "status", descending: false).order(by: "company", descending: false).addSnapshotListener { (QuerySnapshot, Error) in
+            guard let documents = QuerySnapshot?.documents else {
+                print("No Documents")
+                return
+            }
+            
+            self.repairs = documents.compactMap { (QueryDocumentSnapshot) -> repair? in
+                return try? QueryDocumentSnapshot.data(as: repair.self)
+            }
+            self.repairsSearch = self.repairs
+            DispatchQueue.main.async {
+                self.repairTableView.reloadData()
+            }
+        }
+    }
+    
+    func loadArchive () {
+        db.collection("Repairs").whereField("status", isEqualTo: "Repaired").order(by: "company", descending: false).addSnapshotListener { (QuerySnapshot, Error) in
             guard let documents = QuerySnapshot?.documents else {
                 print("No Documents")
                 return
@@ -68,13 +92,54 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Repair", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepairTableViewCell", for: indexPath) as! RepairTableViewCell
         let repaired = repairsSearch[indexPath.row]
-        
-        cell.textLabel!.text = repaired.company + " | " + repaired.model + " - " + repaired.sn
+        cell.company.text = repaired.company
+        cell.tool.text = repaired.model + " - " + repaired.sn
+
+        if repaired.status == "Initiated"{
+            cell.status.backgroundColor = .red
+        }
+        else if repaired.status == "Quoted" {
+            cell.status.backgroundColor = .orange
+        }
+        else if repaired.status == "In Repair" {
+            cell.status.backgroundColor = .purple
+        }
+        else {
+            cell.status.backgroundColor = .green
+        }
         
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "repairDetailsegue", sender: self)
+    }
+    
+    @IBAction func openrepair() {
+        loadData()
+        openRepairs.backgroundColor = IMS
+        closedRepairs.backgroundColor = .white
+        openRepairs.setTitleColor(.white, for: .normal)
+        closedRepairs.setTitleColor(IMS, for: .normal)
+    }
+    @IBAction func closedRepair() {
+        loadArchive()
+        closedRepairs.backgroundColor = IMS
+        openRepairs.backgroundColor = .white
+        openRepairs.setTitleColor(IMS, for: .normal)
+        closedRepairs.setTitleColor(.white, for: .normal)
+        
+    }
+    func reload () {
+        if(closedRepairs.backgroundColor == IMS){
+            loadArchive()
+        }
+        else{
+            loadData()
+        }
+    }
+    
     
     // This prepares to show the detail view of the selected row
     
@@ -122,7 +187,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     //This Provides refresh functionallity
     @objc func refresh(_ refreshControl: UIRefreshControl) {
-        loadData()
+        reload()
         refreshControl.endRefreshing()
+        
     }
 }

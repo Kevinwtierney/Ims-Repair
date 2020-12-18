@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bte-tZ-bQ4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bte-tZ-bQ4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -116,14 +116,14 @@
             <objects>
                 <viewController id="DPC-Uj-Eyh" customClass="RequestViewController" customModule="Ims_Repair" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iGC-nA-EcE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X - 2background2" translatesAutoresizingMaskIntoConstraints="NO" id="qh4-Kq-bBg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RjQ-sa-KIb" userLabel="Vertical Stack View">
-                                <rect key="frame" x="20" y="100" width="374" height="330"/>
+                                <rect key="frame" x="20" y="188" width="374" height="330"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y4a-dl-5OW" userLabel="Row Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -285,7 +285,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jkm-gm-lA4">
-                                <rect key="frame" x="144.5" y="474" width="125" height="125"/>
+                                <rect key="frame" x="144.5" y="562" width="125" height="125"/>
                                 <color key="backgroundColor" red="0.0" green="0.33333333333333331" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="kaa-Vw-FM0"/>
@@ -307,7 +307,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nk-fz-lO4">
-                                <rect key="frame" x="47" y="558" width="320" height="216"/>
+                                <rect key="frame" x="47" y="646" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                         </subviews>
@@ -363,35 +363,56 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SsP-Kg-RWZ">
-                                <rect key="frame" x="20" y="144" width="374" height="718"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="144" width="374" height="668"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.77798020999999995" blue="0.98167842630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Repair" id="PTf-1b-bWd">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PTf-1b-bWd" id="Pqp-7t-3VI">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="lbb-QZ-idz" kind="show" identifier="repairDetailsegue" id="jkT-x6-lri"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <sections/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBq-oK-BRl">
+                                <rect key="frame" x="207" y="812" width="207" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Cwo-Re-dnN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Closed Repairs">
+                                    <color key="titleColor" red="0.0" green="0.33333333329999998" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closedRepair" destination="7OZ-Uj-XFa" eventType="touchUpInside" id="tlk-Kq-qgb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKd-a3-16N">
+                                <rect key="frame" x="0.0" y="812" width="207" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.33333333329999998" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZsU-NA-b6Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Open Repairs">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openrepair" destination="7OZ-Uj-XFa" eventType="touchUpInside" id="ja1-0H-Trb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sy9-dv-zUn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="g0V-DE-cyg" firstAttribute="leading" secondItem="sy9-dv-zUn" secondAttribute="leading" constant="20" id="2yb-8u-QsI"/>
+                            <constraint firstItem="vBq-oK-BRl" firstAttribute="leading" secondItem="zKd-a3-16N" secondAttribute="trailing" id="B9P-fO-kum"/>
+                            <constraint firstItem="sy9-dv-zUn" firstAttribute="bottom" secondItem="vBq-oK-BRl" secondAttribute="bottom" id="BOI-m9-SFF"/>
+                            <constraint firstItem="vBq-oK-BRl" firstAttribute="width" secondItem="zKd-a3-16N" secondAttribute="width" id="Cfs-yy-IHE"/>
+                            <constraint firstItem="zKd-a3-16N" firstAttribute="leading" secondItem="sy9-dv-zUn" secondAttribute="leading" id="G9Y-h6-pPD"/>
+                            <constraint firstItem="vBq-oK-BRl" firstAttribute="leading" secondItem="zKd-a3-16N" secondAttribute="trailing" id="HcN-AQ-Kuc"/>
+                            <constraint firstItem="zKd-a3-16N" firstAttribute="leading" secondItem="sy9-dv-zUn" secondAttribute="leading" id="Hwd-BE-py9"/>
                             <constraint firstItem="sy9-dv-zUn" firstAttribute="trailing" secondItem="SsP-Kg-RWZ" secondAttribute="trailing" constant="20" id="h8f-kF-DkE"/>
-                            <constraint firstItem="SsP-Kg-RWZ" firstAttribute="bottom" secondItem="sy9-dv-zUn" secondAttribute="bottom" id="hS0-2i-ecD"/>
+                            <constraint firstItem="sy9-dv-zUn" firstAttribute="trailing" secondItem="vBq-oK-BRl" secondAttribute="trailing" id="hJF-Dj-HKZ"/>
+                            <constraint firstItem="SsP-Kg-RWZ" firstAttribute="bottom" secondItem="sy9-dv-zUn" secondAttribute="bottom" constant="-50" id="hS0-2i-ecD"/>
                             <constraint firstItem="g0V-DE-cyg" firstAttribute="top" secondItem="sy9-dv-zUn" secondAttribute="top" id="lQx-oH-6f4"/>
                             <constraint firstItem="SsP-Kg-RWZ" firstAttribute="top" secondItem="g0V-DE-cyg" secondAttribute="bottom" id="mz1-Wy-Xut"/>
                             <constraint firstItem="sy9-dv-zUn" firstAttribute="trailing" secondItem="g0V-DE-cyg" secondAttribute="trailing" constant="20" id="o1B-hw-cTy"/>
+                            <constraint firstItem="sy9-dv-zUn" firstAttribute="bottom" secondItem="zKd-a3-16N" secondAttribute="bottom" id="voa-gh-GVP"/>
                             <constraint firstItem="SsP-Kg-RWZ" firstAttribute="leading" secondItem="sy9-dv-zUn" secondAttribute="leading" constant="20" id="xd0-W2-5GT"/>
                         </constraints>
                     </view>
@@ -421,13 +442,16 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="closedRepairs" destination="vBq-oK-BRl" id="3o8-sQ-LxM"/>
+                        <outlet property="openRepairs" destination="zKd-a3-16N" id="oUi-XS-2N9"/>
                         <outlet property="repairTableView" destination="SsP-Kg-RWZ" id="ICK-Nc-4Za"/>
                         <outlet property="searchBar" destination="g0V-DE-cyg" id="HDm-Ru-dHX"/>
+                        <segue destination="lbb-QZ-idz" kind="show" identifier="repairDetailsegue" id="X58-zo-joS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nti-Wl-PUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3428" y="76"/>
+            <point key="canvasLocation" x="3427.5362318840585" y="75.669642857142847"/>
         </scene>
         <!--Profile-->
         <scene sceneID="WP4-hX-4uq">
@@ -820,7 +844,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="AeP-Ti-OCK">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="qUg-R0-4NU">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="deleteEntry:" destination="lbb-QZ-idz" id="Rdd-yb-0VJ"/>
                             </connections>
@@ -877,7 +901,7 @@
                                 <rect key="frame" x="175" y="438" width="70" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="0.0" green="0.3803921569" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.33333333329999998" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="sigInAction:" destination="Dnc-eh-fyh" eventType="touchUpInside" id="S3A-OI-eVL"/>
@@ -974,7 +998,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jCF-BI-5oz"/>
-        <segue reference="6GM-U8-b1E"/>
+        <segue reference="0iC-8X-7Gc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="X - 1background-1" width="375" height="812"/>

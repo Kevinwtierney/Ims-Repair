@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestoreSwift
-
+import FirebaseFirestore
 
 
 class UserProfileViewController: UIViewController {

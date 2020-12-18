@@ -35,16 +35,6 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
         pickerView.isHidden = true
         pickerView.delegate = self
         pickerView.dataSource = self
-//    self.name.text = ""
-//    self.email.text = ""
-//    self.company.text = ""
-//    self.model.text = ""
-//    self.brand.text = ""
-//    self.sn.text = ""
-//    self.issue.text = ""
-//    self.status.text = ""
-//    self.toolTitle.text = ""
-//    self.comptitle.text = ""
       loadrepair()
      
     }
@@ -150,7 +140,7 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
             status.backgroundColor = .orange
         }
         else if status.text == "In Repair" {
-            status.backgroundColor = .yellow
+            status.backgroundColor = .purple
         }
         else {
             status.backgroundColor = .green

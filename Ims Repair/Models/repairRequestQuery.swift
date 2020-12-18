@@ -48,8 +48,6 @@ struct users: Identifiable, Codable{
        case uid
        case admin = "isadmin"
     }
-    
-    
 }
 
 

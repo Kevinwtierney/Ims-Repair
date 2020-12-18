@@ -21,6 +21,8 @@
 		D5A671C425632BBA008BA79B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A671C325632BBA008BA79B /* GoogleService-Info.plist */; };
 		D5EF6DED2568968200BE5208 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF6DEC2568968200BE5208 /* RequestViewController.swift */; };
 		D5F606DF256CD59D003D77E6 /* RepairDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F606DE256CD59D003D77E6 /* RepairDetailViewController.swift */; };
+		D5FFD0FF258D1E7600478910 /* RepairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FFD0FD258D1E7600478910 /* RepairTableViewCell.swift */; };
+		D5FFD100258D1E7600478910 /* RepairTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5FFD0FE258D1E7600478910 /* RepairTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		D5A671C325632BBA008BA79B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5EF6DEC2568968200BE5208 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		D5F606DE256CD59D003D77E6 /* RepairDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairDetailViewController.swift; sourceTree = "<group>"; };
+		D5FFD0FD258D1E7600478910 /* RepairTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairTableViewCell.swift; sourceTree = "<group>"; };
+		D5FFD0FE258D1E7600478910 /* RepairTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepairTableViewCell.xib; sourceTree = "<group>"; };
 		D87C6C4E4369E2080B3EB7ED /* Pods-Ims Repair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ims Repair.debug.xcconfig"; path = "Target Support Files/Pods-Ims Repair/Pods-Ims Repair.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +128,8 @@
 				D5EF6DEC2568968200BE5208 /* RequestViewController.swift */,
 				D5F606DE256CD59D003D77E6 /* RepairDetailViewController.swift */,
 				D57C027D257ED6BD00C06085 /* UserProfileViewController.swift */,
+				D5FFD0FD258D1E7600478910 /* RepairTableViewCell.swift */,
+				D5FFD0FE258D1E7600478910 /* RepairTableViewCell.xib */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 				D5A671C425632BBA008BA79B /* GoogleService-Info.plist in Resources */,
 				D519FAAD2562F0E9003C56D6 /* Assets.xcassets in Resources */,
 				D519FAAB2562F0E8003C56D6 /* Main.storyboard in Resources */,
+				D5FFD100258D1E7600478910 /* RepairTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +258,7 @@
 				D54F6ED5256A1B1800CB807A /* repairRequestQuery.swift in Sources */,
 				D519FAA62562F0E8003C56D6 /* SceneDelegate.swift in Sources */,
 				D57C027E257ED6BD00C06085 /* UserProfileViewController.swift in Sources */,
+				D5FFD0FF258D1E7600478910 /* RepairTableViewCell.swift in Sources */,
 				D5A671C125632B1F008BA79B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
