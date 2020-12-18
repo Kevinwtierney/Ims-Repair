@@ -94,7 +94,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepairTableViewCell", for: indexPath) as! RepairTableViewCell
         let repaired = repairsSearch[indexPath.row]
-        cell.company.text = repaired.company
+        cell.company.text = repaired.company + ":"
         cell.tool.text = repaired.model + " - " + repaired.sn
 
         if repaired.status == "Initiated"{
