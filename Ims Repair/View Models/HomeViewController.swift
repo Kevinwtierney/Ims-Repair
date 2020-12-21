@@ -48,7 +48,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // This function Loads data from firstore
     func loadData () {
-        db.collection("Repairs").whereField("status", isNotEqualTo: "Repaired").order(by: "status", descending: false).order(by: "company", descending: false).addSnapshotListener { (QuerySnapshot, Error) in
+        db.collection("Repairs").whereField("status", isNotEqualTo: "4 - Repaired").order(by: "status", descending: false).order(by: "company", descending: false).addSnapshotListener { (QuerySnapshot, Error) in
             guard let documents = QuerySnapshot?.documents else {
                 print("No Documents")
                 return
@@ -62,10 +62,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.repairTableView.reloadData()
             }
         }
+        
     }
     
     func loadArchive () {
-        db.collection("Repairs").whereField("status", isEqualTo: "Repaired").order(by: "company", descending: false).addSnapshotListener { (QuerySnapshot, Error) in
+        db.collection("Repairs").whereField("status", isEqualTo: "4 - Repaired").order(by: "company", descending: false).addSnapshotListener { (QuerySnapshot, Error) in
             guard let documents = QuerySnapshot?.documents else {
                 print("No Documents")
                 return
@@ -80,8 +81,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-    
-    
+
     // these functions load populate the table view
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -96,18 +96,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let repaired = repairsSearch[indexPath.row]
         cell.company.text = repaired.company + ":"
         cell.tool.text = repaired.model + " - " + repaired.sn
+        cell.status.image = UIImage(named: repaired.brand)
 
-        if repaired.status == "Initiated"{
-            cell.status.backgroundColor = .red
+        if repaired.status == "1 - Initiated"{
+            cell.shadow.addShadow(Color: .red)
         }
-        else if repaired.status == "Quoted" {
-            cell.status.backgroundColor = .orange
+        else if repaired.status == "2 - Quoted" {
+            cell.shadow.addShadow(Color: .yellow)
         }
-        else if repaired.status == "In Repair" {
-            cell.status.backgroundColor = .purple
+        else if repaired.status == "3 - In Repair" {
+            cell.shadow.addShadow(Color: .blue)
         }
         else {
-            cell.status.backgroundColor = .green
+            cell.shadow.addShadow(Color: .green)
+            
         }
         
         return cell

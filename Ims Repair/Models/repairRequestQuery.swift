@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 struct repair: Identifiable, Codable{
     @DocumentID var id : String?
@@ -18,6 +19,8 @@ struct repair: Identifiable, Codable{
     var sn: String
     var issue: String
     var status: String
+    var created: Timestamp
+    var updated: Timestamp
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -29,6 +32,8 @@ struct repair: Identifiable, Codable{
         case sn
         case issue
         case status
+        case created
+        case updated
         }
     }
 

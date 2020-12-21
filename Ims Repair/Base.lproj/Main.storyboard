@@ -623,7 +623,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GOm-au-mC6" userLabel="Vertical Stack">
-                                <rect key="frame" x="20" y="288" width="374" height="470"/>
+                                <rect key="frame" x="20" y="288" width="374" height="530"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2PL-w1-zpf">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -774,8 +774,29 @@
                                             <constraint firstAttribute="height" constant="30" id="CzZ-Ym-f8p"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KWv-nS-H35">
+                                        <rect key="frame" x="0.0" y="420" width="374" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osj-GB-pAP" userLabel="updated:">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-py-x8Y" userLabel="updated">
+                                                <rect key="frame" x="90" y="0.0" width="284" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Vna-zO-fGT"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cTx-02-w1J"/>
+                                        </constraints>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YnU-Cl-r6k">
-                                        <rect key="frame" x="0.0" y="420" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="480" width="374" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Status" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8OE-ly-ET2" userLabel="status">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -804,6 +825,7 @@
                                     <constraint firstItem="c1o-8A-ZwI" firstAttribute="width" secondItem="PB2-E1-6zz" secondAttribute="width" id="Hwe-H5-emq"/>
                                     <constraint firstItem="zex-Zp-eAs" firstAttribute="width" secondItem="PB2-E1-6zz" secondAttribute="width" id="ICV-kl-iCR"/>
                                     <constraint firstItem="8dq-S8-fjW" firstAttribute="width" secondItem="PB2-E1-6zz" secondAttribute="width" id="OQH-sZ-etW"/>
+                                    <constraint firstItem="Osj-GB-pAP" firstAttribute="width" secondItem="PB2-E1-6zz" secondAttribute="width" id="P9O-Os-bCQ"/>
                                     <constraint firstItem="YxH-wk-Wea" firstAttribute="width" secondItem="PB2-E1-6zz" secondAttribute="width" id="Prb-2m-gcQ"/>
                                     <constraint firstItem="Tpj-HP-eLa" firstAttribute="width" secondItem="PB2-E1-6zz" secondAttribute="width" id="lXo-7m-p3N"/>
                                 </constraints>
@@ -861,6 +883,7 @@
                         <outlet property="sn" destination="bPT-GS-vcF" id="PHM-kb-tri"/>
                         <outlet property="status" destination="8OE-ly-ET2" id="u63-ch-b4O"/>
                         <outlet property="toolTitle" destination="ul3-lE-veU" id="ey7-iT-qq3"/>
+                        <outlet property="updated" destination="2OL-py-x8Y" id="1ia-Zh-xnC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuR-Vy-Tc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

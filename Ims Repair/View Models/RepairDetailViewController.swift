@@ -22,10 +22,11 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet var comptitle: UILabel!
     @IBOutlet var toolTitle: UILabel!
     @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet var updated: UILabel!
     
     var repairid : String  = ""
     var repairdetail = [repair]()
-    let statusList = ["Initiated", "Quoted", "In Repair", "Repaired"]
+    let statusList = ["1 - Initiated", "2 - Quoted", "3 - In Repair", "4 - Repaired"]
     
     let db = Firestore.firestore()
     
@@ -52,6 +53,12 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
                     self.brand.text = repaired!.brand
                     self.sn.text = repaired!.sn
                     self.issue.text = repaired!.issue
+                    let formater = DateFormatter()
+                    formater.dateStyle = .medium
+                    formater.timeStyle = .short
+                    let date = repaired!.updated.dateValue()
+                    let dates = (formater.string(from: date))
+                    self.updated.text = dates
                     self.status.text = repaired!.status
                     self.comptitle.text = repaired?.company
                     self.toolTitle.text = repaired?.model
@@ -64,7 +71,7 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
         }
     }
     func updateStatus() {
-        db.collection("Repairs").document(repairid).updateData(["status" : "\(self.status.text!)"]) { error in
+        db.collection("Repairs").document(repairid).updateData(["status" : "\(self.status.text!)", "updated" : FieldValue.serverTimestamp() ]) { error in
             if let error = error {
                     print("Error updating document: \(error)")
                 } else {
@@ -130,22 +137,21 @@ class RepairDetailViewController: UIViewController, UIPickerViewDataSource, UIPi
         updateStatus()
         pickerView.isHidden = true
         status.resignFirstResponder()
-        
     }
+    
     func StatusColor() {
-        if status.text == "Initiated"{
+        if status.text == "1 - Initiated"{
             status.backgroundColor = .red
         }
-        else if status.text == "Quoted" {
-            status.backgroundColor = .orange
+        else if status.text == "2 - Quoted" {
+            status.backgroundColor = .yellow
         }
-        else if status.text == "In Repair" {
-            status.backgroundColor = .purple
+        else if status.text == "3 - In Repair" {
+            status.backgroundColor = .blue
         }
         else {
             status.backgroundColor = .green
         }
-        
     }
 
 }

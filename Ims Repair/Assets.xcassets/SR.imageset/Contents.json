@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "ims_ur_logo_small 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ims_ur_logo_small 1@2x.png",
+      "filename" : "SR.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ims_ur_logo_small 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

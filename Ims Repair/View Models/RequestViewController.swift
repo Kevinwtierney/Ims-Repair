@@ -29,7 +29,7 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     let db = Firestore.firestore()
     let storage = Storage.storage()
     let storageRef = StorageReference()
-    let brands = ["Bosch", "Panasonic","Dessouter", "Other"]
+    let brands = ["Bosch", "Panasonic","Desoutter","SR" ,"Other"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         var ref: DocumentReference? = nil
         ref = db.collection("Repairs").addDocument(data: [
             "name" : name.text!,"email" : email.text!,"company" : company.text!,"brand" : brand.text!,
-            "model" : model.text!,"sn" : sn.text!,"issue" : issue.text!,"status" : "Initiated"
+            "model" : model.text!,"sn" : sn.text!,"issue" : issue.text!,"status" : "1 - Initiated", "created" : FieldValue.serverTimestamp(), "updated" : FieldValue.serverTimestamp()
         ])
         { err in
             if let err = err {
@@ -100,7 +100,9 @@ class RequestViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),]
             
             activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController, animated: true, completion: nil)
+            self.present(activityViewController, animated: true) {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

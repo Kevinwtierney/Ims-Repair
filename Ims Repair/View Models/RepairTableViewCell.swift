@@ -12,6 +12,7 @@ class RepairTableViewCell: UITableViewCell {
     @IBOutlet var company: UILabel!
     @IBOutlet var tool: UILabel!
     @IBOutlet var status:UIImageView!
+    @IBOutlet var shadow: UIImageView!
     
 
     override func awakeFromNib() {
@@ -26,4 +27,14 @@ class RepairTableViewCell: UITableViewCell {
     }
     
     
+}
+extension UIView {
+
+    func addShadow(Color: UIColor) {
+        layer.shadowColor = Color.cgColor
+        layer.shadowOffset = CGSize(width: 5, height: 0.0)
+        layer.shadowOpacity = 0.5
+        layer.shadowRadius = 2
+        clipsToBounds = false
+    }
 }
